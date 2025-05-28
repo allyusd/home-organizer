@@ -12,6 +12,11 @@ imageCompareSource.push({
   before: "IMG_8870.jpg",
   after: "IMG_8999.jpg"
 });
+
+imageCompareSource.push({
+  before: "IMG_8827.jpg",
+  after: "IMG_8833.jpg"
+});
 </script>
 
 <template>
