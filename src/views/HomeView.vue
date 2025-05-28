@@ -15,25 +15,35 @@ imageCompareSource.push({
 </script>
 
 <template>
-  <div class="font-bold text-2xl text-center pb-4">整理收納成果展示</div>
+  <div class="flex flex-col items-center">
+    <!-- 主標題 -->
+    <div class="font-extrabold text-4xl text-center pb-6 text-gray-800 drop-shadow-md">
+      整理收納成果展示
+    </div>
 
-  <div v-for="(item, index) in imageCompareSource" :key="index">
-    <div class="font-bold text-2xl text-center">點擊圖片看結果</div>
-    <ImageFadeToggle class="p-4" :image1="item.before" :image2="item.after" />
+    <div class="max-w-[800px]">
 
-    <div class="font-bold text-2xl text-center">移動圖片中間圖示比較前後差異</div>
-    <!-- 這個元件的左右邊跟我理解的相反 -->
-    <ImageCompare class="shadow-lg rounded-2xl" :pt="{
-      root: {
-        style: 'aspect-ratio: 4 / 3;'
-      }
-    }">
-      <template #left>
-        <img :src="item.after" />
-      </template>
-      <template #right>
-        <img :src="item.before" />
-      </template>
-    </ImageCompare>
+      <div v-for="(item, index) in imageCompareSource" :key="index">
+        <!-- 子標題 -->
+        <div class="font-semibold text-xl text-center pb-3 text-gray-600">
+          點擊圖片切換前後效果
+        </div>
+        <div class="flex justify-center">
+          <ImageFadeToggle :image1="item.before" :image2="item.after" />
+        </div>
+
+        <div class="font-semibold text-xl text-center pt-6 pb-3 text-gray-600">
+          拖動中間滑桿比較前後差異
+        </div>
+        <ImageCompare class="shadow-lg rounded-2xl mx-auto" :pt="{ root: { style: 'aspect-ratio: 4 / 3;' } }">
+          <template #left>
+            <img :src="item.after" />
+          </template>
+          <template #right>
+            <img :src="item.before" />
+          </template>
+        </ImageCompare>
+      </div>
+    </div>
   </div>
 </template>
