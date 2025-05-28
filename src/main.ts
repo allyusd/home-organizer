@@ -26,4 +26,7 @@ app.use(PrimeVue, {
 import Button from "primevue/button"
 app.component('Button', Button);
 
+import ImageCompare from 'primevue/imagecompare';
+app.component('ImageCompare', ImageCompare);
+
 app.mount('#app')
