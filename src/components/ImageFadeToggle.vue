@@ -14,9 +14,9 @@ const toggle = () => {
 
 <template>
   <div class="relative w-full cursor-pointer" @click="toggle">
-    <Image class="w-full object-cover transition-all duration-[3000ms]"
+    <img class="w-full object-cover transition-all duration-[3000ms]"
       :class="[showImage2 ? 'opacity-0 grayscale' : 'opacity-100 grayscale']" :src="image1" />
-    <Image class="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-[3000ms]"
+    <img class="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-[3000ms]"
       :class="[showImage2 ? 'opacity-100' : 'opacity-0']" :src="image2" />
   </div>
 </template>

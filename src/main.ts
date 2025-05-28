@@ -29,9 +29,6 @@ app.component('Button', Button);
 import ImageCompare from 'primevue/imagecompare';
 app.component('ImageCompare', ImageCompare);
 
-import Image from 'primevue/image';
-app.component('Image', Image);
-
 import Tabs from 'primevue/tabs';
 import TabList from 'primevue/tablist';
 import Tab from 'primevue/tab';
