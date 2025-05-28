@@ -15,11 +15,18 @@ imageCompareSource.push({
 </script>
 
 <template>
+  <div class="font-bold text-2xl text-center">整理收納成果展示</div>
+
   <div v-for="(item, index) in imageCompareSource" :key="index">
-    <ImageFadeToggle :image1="item.before" :image2="item.after" />
+
+    <ImageFadeToggle class="p-4" :image1="item.before" :image2="item.after" />
 
     <!-- 這個元件的左右邊跟我理解的相反 -->
-    <ImageCompare class="shadow-lg rounded-2xl">
+    <ImageCompare class="shadow-lg rounded-2xl" :pt="{
+      root: {
+        style: 'aspect-ratio: 4 / 3;'
+      }
+    }">
       <template #left>
         <img :src="item.after" />
       </template>

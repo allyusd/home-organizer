@@ -29,4 +29,7 @@ app.component('Button', Button);
 import ImageCompare from 'primevue/imagecompare';
 app.component('ImageCompare', ImageCompare);
 
+import Image from 'primevue/image';
+app.component('Image', Image);
+
 app.mount('#app')
