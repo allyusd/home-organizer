@@ -32,4 +32,15 @@ app.component('ImageCompare', ImageCompare);
 import Image from 'primevue/image';
 app.component('Image', Image);
 
+import Tabs from 'primevue/tabs';
+import TabList from 'primevue/tablist';
+import Tab from 'primevue/tab';
+import TabPanels from 'primevue/tabpanels';
+import TabPanel from 'primevue/tabpanel';
+app.component('Tabs', Tabs);
+app.component('TabList', TabList);
+app.component('Tab', Tab);
+app.component('TabPanels', TabPanels);
+app.component('TabPanel', TabPanel);
+
 app.mount('#app')
