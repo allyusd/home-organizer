@@ -13,14 +13,10 @@ const toggle = () => {
 </script>
 
 <template>
-  <div class="relative w-300 h-220 cursor-pointer" @click="toggle">
-    <!-- 圖片 1（灰階）-->
-    <Image class="absolute inset-0 w-full h-full object-cover transition-all duration-3000" :class="[
-      showImage2 ? 'opacity-0' : 'opacity-100 grayscale',
-    ]" :src="image1" />
-    <!-- 圖片 2（彩色）-->
-    <Image class="absolute inset-0 w-full h-full object-cover transition-opacity duration-3000" :class="[
-      showImage2 ? 'opacity-100' : 'opacity-0'
-    ]" :src="image2" />
+  <div class="relative w-full max-w-300 cursor-pointer" @click="toggle" style="padding-top: 75%;">
+    <Image class="absolute top-0 left-0 w-full h-full object-cover transition-all duration-[3000ms]"
+      :class="[showImage2 ? 'opacity-0 grayscale' : 'opacity-100 grayscale']" :src="image1" />
+    <Image class="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-[3000ms]"
+      :class="[showImage2 ? 'opacity-100' : 'opacity-0']" :src="image2" />
   </div>
 </template>
