@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import ImageFadeToggle from '../components/ImageFadeToggle.vue';
 
 interface ImageCompareSource {
   before: string;
@@ -14,7 +15,9 @@ imageCompareSource.push({
 </script>
 
 <template>
-  <div class="w-full" v-for="(item, index) in imageCompareSource" :key="index">
+  <div v-for="(item, index) in imageCompareSource" :key="index">
+    <ImageFadeToggle :image1="item.before" :image2="item.after" />
+
     <!-- 這個元件的左右邊跟我理解的相反 -->
     <ImageCompare class="shadow-lg rounded-2xl">
       <template #left>
